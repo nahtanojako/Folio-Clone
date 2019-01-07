@@ -1,0 +1,61 @@
+#main-nav
+  z-index: 999
+  position: fixed
+  width: 100%
+  background: white 
+  box-shadow: 0 5px 10px rgba(black, 0.1)
+  +transform(translateY(-100%))
+  +transition(all 0.5s ease)
+  &.nav-show
+    +transform(translateY(0%))
+  .logo
+    img
+      width: 100px
+
+  .toggler
+    cursor: pointer
+    +bp(md)
+      display: none
+    i
+      font-size: 2rem
+      padding-right: 1rem
+
+.menu
+  height: 0
+  overflow: hidden
+  background: white
+  margin: 0 -15px
+  +bp(md)
+    height: 100%
+    float: right
+    background: transparent
+    margin-top: -3rem
+    a
+      display: inline-block
+
+  &.menu-show
+    height: 100%
+
+  li
+    +bp(md)
+      display: inline-block
+      padding: 7px 2rem
+    a
+      color: $off-black
+      display: block
+      text-align: center
+      padding: 7px
+      border-top: 1px solid $off-white
+      +transition(all 0.5s ease)
+      +bp(md)
+        padding: 0
+        border: none
+      &:hover
+        color: $primary
+
+
+#main-nav
+  .row
+    z-index: 999
+
+

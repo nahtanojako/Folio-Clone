@@ -1,0 +1,41 @@
+#main-header
+  background: url(../img/home-bg.jpg) no-repeat center center
+  background-size: cover
+  height: 100vh
+  position: relative
+  
+  .main-header-content
+    +center(y)
+    color: white
+    h2
+      text-transform: uppercase
+      font-size: 2.3rem
+      line-height: 1
+      margin-bottom: 1rem
+      +bp(md)
+        font-size: 3.5rem
+    h4
+      letter-spacing: 5px
+      +bp(md)
+        font-size: 1.2rem
+    h2, h4
+      font-weight: normal
+
+.social-icons
+  margin-top: 2rem
+  li
+    display: inline-block
+    padding-right: 1rem
+    +bp(md)
+      padding-right: 1.5rem
+    a
+      color: darken($white, 5%)
+      &:hover
+        color: white
+      i
+        font-size: 1.1rem
+        +bp(md)
+          font-size: 1.4rem
+
+
+

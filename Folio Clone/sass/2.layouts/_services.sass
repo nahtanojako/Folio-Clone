@@ -1,0 +1,20 @@
+#services-section
+  .services-wrap
+    i
+      font-size: 3rem
+      color: $primary
+
+.indicator
+  +center(x)
+  .dot
+    display: inline-block
+    margin: 0 3px
+    width: 13px
+    height: 13px
+    border-radius: 50%
+    background: darken($white,10%)
+    cursor: pointer
+    +transition(all 0.3s ease)
+    &.active,
+    &:hover
+      background: $primary

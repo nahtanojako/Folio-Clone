@@ -1,0 +1,67 @@
+// Display Flex
+=flex($direction, $align)
+  display: flex
+  align-items: center
+  @if $direction == 'row'
+    flex-direction: row
+  @if $direction == 'col'
+    flex-direction: column
+  @if $align == 'center'
+    justify-content: center
+  @if $align == 'sp-b'
+    justify-content: space-between
+  @if $align == 'sp-a'
+    justify-content: space-around
+  @if $align == 'fl-s'
+    justify-content: flex-start
+  @if $align == 'fl-e'
+    justify-content: flex-end
+
+// Centering Elements
+=center($axis: 'both')
+  position: absolute
+  @if $axis == 'y'
+    top: 50%
+    +transform(translateY(-50%))
+  @if $axis == 'x'
+    left: 50%
+    +transform(translateX(-50%))
+  @if $axis == 'both'
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+
+
+// Transition
+=transition($prop...)
+  -webkit-transition: $prop
+  -moz-transition: $prop
+  -ms-transition: $prop
+  -o-transition: $prop
+  transition: $prop
+
+// Transform
+=transform($prop...)
+  -webkit-transform: $prop
+  -moz-transform: $prop
+  -ms-transform: $prop
+  -o-transform: $prop
+  transform: $prop
+
+
+// Media Queries
+=bp($size)
+  @if $size == "lg"
+    @media (min-width: 1200px)
+      @content
+  @if $size == "md"
+    @media (min-width: 992px)
+      @content
+  @if $size == "sm"
+    @media (min-width: 768px)
+      @content
+  @if $size == "xs"
+    @media (max-width: 767px)
+      @content
+
+    

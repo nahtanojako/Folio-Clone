@@ -1,0 +1,28 @@
+#contact-section
+  .row
+    display: block
+    +bp(md)
+      display: flex
+      align-items: flex-start
+      justify-content: space-around !important
+    .col
+      flex-basis: 100%
+      flex-grow: 1
+      .section-head
+        text-align: left
+      & > p
+        margin-bottom: 1rem
+        color: rgba($black, 0.8)
+      form
+        margin-top: 2rem
+        +bp(md)
+          margin: 0
+          +flex(row, sp-b)
+          flex-wrap: wrap
+          .form-group
+            flex-basis: 100%
+            &:nth-child(1),
+            &:nth-child(2)
+              flex-basis: 48%
+
+
